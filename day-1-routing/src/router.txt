@@ -1,0 +1,9 @@
+1. Stop the Terminal 
+ctrl + c
+
+2.install package
+npm i-react-router-dom
+
+3. check install in package.json
+
+4.npm start
