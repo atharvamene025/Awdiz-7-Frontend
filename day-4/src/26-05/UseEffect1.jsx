@@ -1,11 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function UseEffect() {
+
+  const [counter,setCounter]=useState(2);
+  
+
   useEffect(() => {
     alert("inside Useeffect");
   });
 
-  return <h2>Use Effect</h2>;
+  return <div>
+    <h2>Counter :{counter}</h2>
+    <button onClick={()=> setCounter(counter+1)}>+</button>
+  </div>
 }
 
 export default UseEffect;
