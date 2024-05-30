@@ -7,3 +7,13 @@ npm i-react-router-dom
 3. check install in package.json
 
 4.npm start
+
+5.Import browser router inside index.js and enclose app in browser router
+
+6. create component inside src folder inside component folder create jsx flies with your page name
+
+7.Import Routers and Routes in App.js 
+
+8.Setup <Routes>
+            <Route/ path="" element={</>}>
+        </Routes>   
