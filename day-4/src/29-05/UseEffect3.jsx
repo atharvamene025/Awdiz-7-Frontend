@@ -18,7 +18,7 @@ function UseEffect3() {
         <button onClick={switchFlag}>Please Login</button>
       )}
 
-      {counter>10  ? <h1>Value Is Above 10</h1>: <h1>Value Is Below 10</h1>}
+      {counter > 10 ? <h1>Value Is Above 10</h1> : <h1>Value Is Below 10</h1>}
       <h1>Counter : {counter}</h1>
 
       <button onClick={() => setCounter(counter + 1)}>Increase</button>
