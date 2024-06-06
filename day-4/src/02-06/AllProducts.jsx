@@ -6,15 +6,15 @@ function AllProducts() {
   console.log(allProducts, "all Products");
 
   async function getproducts() {
-    // alert("Hii From get Products");
-
     try {
-      const response = await axios.get("https://fakestoreapi.com/products/1");
+      const response = await axios.get("https://fakestoreapi.com/products");
       console.log(response.data);
+      setAllProducts(response.data);
     } catch (error) {
       console.log(error);
     }
   }
+
   useEffect(() => {
     getproducts();
   }, []);
@@ -22,12 +22,16 @@ function AllProducts() {
   return (
     <div>
       <h1>All Products</h1>
-
-      <div>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
         {allProducts.map((product) => (
-          <div>
-            {/* <img src={product.image} /> */}
-            <h1>{product.title}</h1>
+          <div key={product.id} style={{ width: "calc(25% - 16px)", border: "2px solid black", padding: "8px", boxSizing: "border-box" }}>
+            <img
+              style={{ width: "100%", height: "200px", objectFit: "cover" }}
+              src={product.image}
+              alt="product"
+            />
+            <h2 style={{ fontSize: "16px" }}>{product.title}</h2>
+            <p style={{ fontSize: "16px" }}>${product.price}</p>
           </div>
         ))}
       </div>
