@@ -1,0 +1,10 @@
+.col-red{
+    color: red;
+    font-size: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#col-blue{
+    color: aqua;
+    font-size: 60px;
+}

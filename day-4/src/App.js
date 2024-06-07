@@ -12,7 +12,9 @@ import UserDetails from "./30-05/UserDetails";
 import Mapping from "./02-06/Mapping";
 import AllProducts from "./02-06/AllProducts";
 import FunctionProp from "./04-06/FunctionProp";
-
+import StyledComponents from "./04-06/StyledComponents";
+import InlineStyling from "./04-06/InlineStyling";
+import TodoList from "./06-06/TodoList";
 
 function App() {
   return (
@@ -22,14 +24,20 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/use-state" element={<UseState />} />
         <Route path="/use-state2" element={<UseState2 />} />
-        <Route path="/use-effect1" element={<UseEffect />} /> 
+        <Route path="/use-effect1" element={<UseEffect />} />
         <Route path="/use-effect2" element={<UseEffect2 />} />
-        <Route path="/use-effect3" element={<UseEffect3 />}/>
-        <Route path="/use-navigate" element={<Routing />}/>
-        <Route path="/user/:username" element={<UserDetails />}/>
-        <Route path="/mapping" element={<Mapping students={["Rahul","Raj","Ram"]} />}/>
-        <Route path="/all-products" element={<AllProducts />}/>
-        <Route path="/function-prop" element={<FunctionProp />}/>
+        <Route path="/use-effect3" element={<UseEffect3 />} />
+        <Route path="/use-navigate" element={<Routing />} />
+        <Route path="/user/:username" element={<UserDetails />} />
+        <Route
+          path="/mapping"
+          element={<Mapping students={["Rahul", "Raj", "Ram"]} />}
+        />
+        <Route path="/all-products" element={<AllProducts />} />
+        <Route path="/function-prop" element={<FunctionProp />} />
+        <Route path="/styled-components" element={<StyledComponents />} />
+        <Route path="/inline-styling" element={<InlineStyling />} />
+        <Route path="/todo-list" element={<TodoList />} />
       </Routes>
     </div>
   );
