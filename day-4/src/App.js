@@ -11,6 +11,7 @@ import Routing from "./30-05/Routing";
 import UserDetails from "./30-05/UserDetails";
 import Mapping from "./02-06/Mapping";
 import AllProducts from "./02-06/AllProducts";
+import FunctionProp from "./04-06/FunctionProp";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/user/:username" element={<UserDetails />}/>
         <Route path="/mapping" element={<Mapping students={["Rahul","Raj","Ram"]} />}/>
         <Route path="/all-products" element={<AllProducts />}/>
+        <Route path="/function-prop" element={<FunctionProp />}/>
       </Routes>
     </div>
   );
