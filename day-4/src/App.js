@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Form } from "react-router-dom";
 import Home from "./Home";
 import UseState from "./25-05/UseState";
 import NotFound from "./25-05/NotFound";
@@ -15,6 +15,8 @@ import FunctionProp from "./04-06/FunctionProp";
 import StyledComponents from "./04-06/StyledComponents";
 import InlineStyling from "./04-06/InlineStyling";
 import TodoList from "./06-06/TodoList";
+import Register from "./08-06/Register";
+import Login from "./08-06/Login";
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
         <Route path="/styled-components" element={<StyledComponents />} />
         <Route path="/inline-styling" element={<InlineStyling />} />
         <Route path="/todo-list" element={<TodoList />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

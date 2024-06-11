@@ -12,8 +12,9 @@ const TodoList = () => {
     setTodo("");
   }
   function deleteTodo(index) {
-    // alert(index)
-    allTodos.splice(index, 1);
+    const newArray = [...allTodos];
+    newArray.splice(index, 1);
+    setAlltodos(newArray);
   }
   return (
     <div
