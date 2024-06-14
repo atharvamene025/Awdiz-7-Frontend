@@ -6,10 +6,10 @@ const Login = () => {
   const [userData, setUserData] = useState({ name: "", password: "" });
   const [errors, setErrors] = useState([]);
   const [disable, setDisable] = useState(true);
-
+  // console.log(userData, "userData");
   function handleChange(event) {
     console.log(event.target.value, event.target.name);
-    setUserData({ ...userData, [event.target.value]: [event.target.name] });
+    setUserData({ ...userData, [event.target.name]: event.target.value });
   }
   //   console.log(userData.name, userData.value);
 async function handleSubmit(e){
@@ -45,11 +45,12 @@ async function handleSubmit(e){
     }
     if(!userData.password){
       errorsArray.push("Password is Required.");
-    }
+    }  
 
     setErrors(errorsArray);
     console.log( "errors.length");
     if(errorsArray.length === 0){
+      // alert("hiii");
       setDisable(false);
     }else{
       setDisable(true);
@@ -58,7 +59,7 @@ async function handleSubmit(e){
   
   return (
     <div>
-      <form onChange={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <h1>Login</h1>
 
         <label htmlFor="">Name :</label>
@@ -77,7 +78,7 @@ async function handleSubmit(e){
             ))}
           </div>
         )}
-        <input  type="submit" value="Login" />
+        <input disabled={disable} type="submit" value="Login" />
       </form>
     </div>
   );
