@@ -1,0 +1,62 @@
+/* Reducer.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  width: 400px;
+  background-color: #f9f9f9;
+  /* justify-content: center; */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #dcdcdc;
+}
+
+.button:active {
+  background-color: #a9a9a9;
+}
+
+button.reset {
+  width: 220px;
+  height: 50px;
+  font-size: 1.2rem;
+  background-color: #ff4c4c;
+  color: white;
+}
+
+button.reset:hover {
+  background-color: #ff0000;
+}
+
+button.reset:active {
+  background-color: #b20000;
+}

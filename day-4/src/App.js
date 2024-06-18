@@ -17,6 +17,7 @@ import InlineStyling from "./04-06/InlineStyling";
 import TodoList from "./06-06/TodoList";
 import Register from "./08-06/Register";
 import Login from "./08-06/Login";
+import Reducer from "./15-06/Reducer";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/todo-list" element={<TodoList />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/reducer" element={<Reducer />} />
       </Routes>
     </div>
   );
