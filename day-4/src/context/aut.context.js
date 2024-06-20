@@ -2,16 +2,15 @@ import { createContext, useReducer } from "react";
 
 
 
-function reducer(state, action) {
+function reducer(state,action) {
   // {type:"LOGIN", payload : {name:'awd', email:'awdiz'}}     
-  switch (action.type) {
+  switch(action.type){
     case "LOGIN":
-      return { ...state, user: state.payload };
-      // case "LOGOUT":
-      //   return { ...state, user: state.payload };
+      return{...state,user:action.payload}
+      case "LOGOUT":
+        return{...state,user:null}
         default:
-        return state;
-    
+          return state
   }
 }
 
