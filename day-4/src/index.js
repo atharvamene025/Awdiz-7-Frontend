@@ -6,42 +6,45 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import MyContextProvider from "./context/aut.context";
-import MyCounterContextProvider from "./context/counter.context"; 
+import MyCounterContextProvider from "./context/counter.context";
+import ThemeContextProvider from "./context/theme.context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <MyContextProvider>
-      <MyCounterContextProvider>
-        <BrowserRouter>
-          <Toaster
-            position="top-center"
-            reverseOrder={false}
-            gutter={8}
-            containerClassName=""
-            containerStyle={{}}
-            toastOptions={{
-              // Define default options
-              className: "",
-              duration: 5000,
-              style: {
-                background: "#363636",
-                color: "#fff",
-              },
-
-              // Default options for specific types
-              success: {
-                duration: 3000,
-                theme: {
-                  primary: "green",
-                  secondary: "black",
+    <ThemeContextProvider>
+      <MyContextProvider>
+        <MyCounterContextProvider>
+          <BrowserRouter>
+            <Toaster
+              position="top-center"
+              reverseOrder={false}
+              gutter={8}
+              containerClassName=""
+              containerStyle={{}}
+              toastOptions={{
+                // Define default options
+                className: "",
+                duration: 5000,
+                style: {
+                  background: "#363636",
+                  color: "#fff",
                 },
-              },
-            }}
-          />
-          <App />
-        </BrowserRouter>
-      </MyCounterContextProvider>
-    </MyContextProvider>
+
+                // Default options for specific types
+                success: {
+                  duration: 3000,
+                  theme: {
+                    primary: "green",
+                    secondary: "black",
+                  },
+                },
+              }}
+            />
+            <App />
+          </BrowserRouter>
+        </MyCounterContextProvider>
+      </MyContextProvider>
+    </ThemeContextProvider>
   </React.StrictMode>
 );
 
