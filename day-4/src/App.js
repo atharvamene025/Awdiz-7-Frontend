@@ -19,6 +19,7 @@ import Register from "./08-06/Register";
 import Login from "./08-06/Login";
 import Reducer from "./15-06/Reducer";
 import CounterContext from "./15-06/CounterContext";
+import TodolistPractice from "./06-06/TodolistPractice";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/reducer" element={<Reducer />} />
         <Route path="/counter" element={<CounterContext />} />
+        <Route path="/todo-practice" element={<TodolistPractice />} />
       </Routes>
     </div>
   );
