@@ -20,6 +20,7 @@ import Login from "./08-06/Login";
 import Reducer from "./15-06/Reducer";
 import CounterContext from "./15-06/CounterContext";
 import TodolistPractice from "./06-06/TodolistPractice";
+import TodoRedux from "./28-06/TodoRedux";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/reducer" element={<Reducer />} />
         <Route path="/counter" element={<CounterContext />} />
         <Route path="/todo-practice" element={<TodolistPractice />} />
+        <Route path="/todo-redux" element={<TodoRedux />} />
       </Routes>
     </div>
   );
