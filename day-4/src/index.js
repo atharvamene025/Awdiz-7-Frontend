@@ -8,7 +8,11 @@ import { Toaster } from "react-hot-toast";
 import MyContextProvider from "./context/aut.context";
 import MyCounterContextProvider from "./context/counter.context";
 import ThemeContextProvider from "./context/theme.context";
+import { Provider } from 'react-redux';
+import store from './redux/store';
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
 root.render(
   <React.StrictMode>
     <ThemeContextProvider>
@@ -40,12 +44,16 @@ root.render(
                 },
               }}
             />
+            <Provider store={store}>
             <App />
+            </Provider>,
+          
           </BrowserRouter>
         </MyCounterContextProvider>
       </MyContextProvider>
     </ThemeContextProvider>
   </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
